@@ -7,11 +7,11 @@ interface ButtonProps {
 }
 
 export default function Button({ text, active, href }: ButtonProps) {
-
   const router = useRouter();
 
   const handleClick = () => {
-    router.push(href)
+    const formattedHref = href.endsWith('/') ? href : `${href}/`;
+    router.push(formattedHref);
   }
 
   return (

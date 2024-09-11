@@ -9,8 +9,8 @@ export default function Navbar() {
 
   return (
     <div className="flex items-center mx-auto sm:mt-[5rem] mt-[1rem] lg:w-[61%] sm:w-[80%] h-[6rem]">
-      <Button text="ABOUT" active={pathname === '/'} href="/" />
-      <Button text="PROJECTS" active={pathname === '/projects'} href="/projects" />
+      <Button text="ABOUT" active={pathname === '/' || pathname === '/index/'} href="/" />
+      <Button text="PROJECTS" active={pathname === '/projects/' || pathname === '/projects'} href="/projects/" />
       <LinksContainer/>
     </div>
   );
